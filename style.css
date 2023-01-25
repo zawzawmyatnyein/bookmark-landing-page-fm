@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .tab [role="tab"] {
+        @apply text-gray-blue
+    }
+
+    .tab [role="tab"][aria-selected="true"] {
+        @apply text-dark-blue border-b-4 border-b-soft-red
+    }
+}
