@@ -5,11 +5,31 @@
 @tailwind utilities;
 
 @layer utilities {
+    .open {
+        @apply z-50 visible opacity-100
+    }
+
+    .close {
+        @apply -z-50 invisible opacity-0
+    }
+
     .tab [role="tab"] {
         @apply text-gray-blue
     }
 
     .tab [role="tab"][aria-selected="true"] {
         @apply text-dark-blue border-b-4 border-b-soft-red
+    }
+
+    .accordion-content {
+        @apply h-0 overflow-hidden invisible transition-all ease-out
+    }
+
+    .accordion.is-open .accordion-content {
+        @apply visible
+    }
+
+    .accordion.is-open .accordion-header svg {
+        @apply rotate-180 text-soft-red
     }
 }
